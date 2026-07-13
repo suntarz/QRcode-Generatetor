@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signal QR — convert_message_for_me_pls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="convert-page">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="orb orb-a" aria-hidden="true"></div>
+    <div class="orb orb-b" aria-hidden="true"></div>
+
+    <main class="shell convert-shell">
+      <header class="brand compact-brand">
+        <a class="brand-mark" href="../">Signal QR</a>
+        <h1>convert_message_for_me_pls</h1>
+        <p class="lede" id="meta-line">กำลังอ่านพารามิเตอร์จาก URL…</p>
+      </header>
+
+      <section class="convert-stage">
+        <div class="preview-frame large">
+          <canvas id="qr-canvas" width="360" height="360"></canvas>
+        </div>
+        <p id="message-echo" class="message-echo"></p>
+        <div class="actions center">
+          <a class="btn ghost" href="../">กลับหน้าสร้าง</a>
+          <a id="png-link" class="btn primary" href="#" download="qrcode.png"
+            >ดาวน์โหลด PNG</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+    <script src="../convert.js"></script>
+  </body>
+</html>

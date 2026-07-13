@@ -1,0 +1,25 @@
+{
+  "name": "qrcode-generatetor",
+  "version": "1.0.0",
+  "description": "Express + GitHub Pages QR code generator with URL parameters",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "qrcode",
+    "express",
+    "github-pages"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

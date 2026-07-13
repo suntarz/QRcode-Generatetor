@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signal QR — QR Code Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="orb orb-a" aria-hidden="true"></div>
+    <div class="orb orb-b" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="brand">
+        <p class="brand-mark">Signal QR</p>
+        <h1>สร้าง QR จากข้อความในพริบตา</h1>
+        <p class="lede">
+          ใส่ข้อความ ปรับขนาด แล้วได้ลิงก์พร้อมพารามิเตอร์ให้แชร์ได้ทันที
+        </p>
+      </header>
+
+      <section class="studio" aria-label="QR generator">
+        <form id="qr-form" class="controls" autocomplete="off">
+          <label>
+            <span>ข้อความ (messages)</span>
+            <textarea
+              id="messages"
+              name="messages"
+              rows="3"
+              required
+              placeholder="change_this_message"
+            >change_this_message</textarea>
+          </label>
+
+          <div class="row">
+            <label>
+              <span>box_size</span>
+              <input
+                id="box_size"
+                name="box_size"
+                type="number"
+                min="1"
+                max="40"
+                value="8"
+              />
+            </label>
+            <label>
+              <span>border</span>
+              <input
+                id="border"
+                name="border"
+                type="number"
+                min="0"
+                max="10"
+                value="2"
+              />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">สร้าง QR</button>
+            <a
+              id="open-link"
+              class="btn ghost"
+              href="./convert_message_for_me_pls/?box_size=8&border=2&messages=change_this_message"
+              >เปิดลิงก์พารามิเตอร์</a
+            >
+          </div>
+        </form>
+
+        <aside class="preview">
+          <div class="preview-frame">
+            <canvas id="qr-canvas" width="280" height="280"></canvas>
+          </div>
+          <p id="share-url" class="share-url"></p>
+          <button type="button" id="copy-link" class="btn ghost compact">
+            คัดลอกลิงก์
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
