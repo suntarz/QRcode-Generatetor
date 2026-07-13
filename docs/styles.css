@@ -274,10 +274,16 @@ input:focus {
   }
 }
 
-#qr-canvas {
+#qr-canvas,
+#qr-image {
   width: 100%;
   height: auto;
   display: block;
+}
+
+#qr-canvas[hidden],
+#qr-image[hidden] {
+  display: none;
 }
 
 .share-url,

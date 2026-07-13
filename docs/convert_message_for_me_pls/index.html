@@ -26,6 +26,7 @@
 
       <section class="convert-stage">
         <div class="preview-frame large">
+          <img id="qr-image" alt="Generated QR code" hidden />
           <canvas id="qr-canvas" width="360" height="360"></canvas>
         </div>
         <p id="message-echo" class="message-echo"></p>
@@ -38,7 +39,7 @@
       </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+    <script src="../vendor/qrcode.min.js"></script>
     <script src="../convert.js"></script>
   </body>
 </html>
