@@ -1,6 +1,6 @@
 # Signal QR — QR Code Generator
 
-Node/Express QR generator ที่อ่านพารามิเตอร์จาก URL และ deploy บน GitHub Pages ได้
+Node/Express QR generator ที่อ่านพารามิเตอร์จาก URL รองรับ GitHub Pages และ [Render](https://render.com)
 
 ## รันบนเครื่อง
 
@@ -10,6 +10,13 @@ npm start
 ```
 
 เปิด [http://localhost:3000](http://localhost:3000)
+
+## Deploy บน Render
+
+1. เปิด [Deploy to Render](https://render.com/deploy?repo=https://github.com/suntarz/QRcode-Generatetor)
+2. หรือสร้าง **Web Service** แล้วชี้ repo นี้ — `build`: `npm install`, `start`: `npm start`
+3. หลัง deploy ใช้ URL แบบ  
+   `https://<service>.onrender.com/convert_message_for_me_pls?box_size=40&border=2&messages=change_this_message`
 
 ## URL พารามิเตอร์
 

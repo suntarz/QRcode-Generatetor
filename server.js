@@ -75,7 +75,7 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ error: "Failed to generate QR code" });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`QR Generator running at http://localhost:${PORT}`);
   console.log(
     `Try: http://localhost:${PORT}/convert_message_for_me_pls?box_size=8&border=2&messages=hello`
